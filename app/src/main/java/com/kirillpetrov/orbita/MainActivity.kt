@@ -12,7 +12,6 @@ import androidx.activity.OnBackPressedCallback
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 
 class MainActivity : ComponentActivity(), GameView.Host {
     private lateinit var game: GameView
@@ -50,8 +49,6 @@ class MainActivity : ComponentActivity(), GameView.Host {
             v.setPadding(i.left, i.top, i.right, i.bottom)
             WindowInsetsCompat.CONSUMED
         }
-        hideSystemBars()
-
         banner = BannerHelper(this, bannerBox)
         rewarded = RewardedHelper(this)
         banner.start()
@@ -65,17 +62,6 @@ class MainActivity : ComponentActivity(), GameView.Host {
                 }
             }
         })
-    }
-
-    private fun hideSystemBars() {
-        val c = WindowInsetsControllerCompat(window, root)
-        c.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        c.hide(WindowInsetsCompat.Type.systemBars())
-    }
-
-    override fun onWindowFocusChanged(hasFocus: Boolean) {
-        super.onWindowFocusChanged(hasFocus)
-        if (hasFocus) hideSystemBars()
     }
 
     override fun onResume() {

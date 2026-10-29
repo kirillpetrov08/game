@@ -207,7 +207,7 @@ class GameView(
         if (!running) return
         var dt = if (lastNs == 0L) 0.016f else (frameTimeNanos - lastNs) / 1_000_000_000f
         lastNs = frameTimeNanos
-        dt = dt.coerceIn(0.001f, 0.033f)
+        dt = dt.coerceIn(0.001f, 0.05f)
         step(dt)
         invalidate()
         Choreographer.getInstance().postFrameCallback(this)
@@ -314,6 +314,18 @@ class GameView(
         val pcx = W - W * 0.09f
         val pcy = H * 0.062f
         hudPause.r.set(pcx - pr * 1.4f, pcy - pr * 1.4f, pcx + pr * 1.4f, pcy + pr * 1.4f)
+        if (BuildConfig.DEBUG) post { logButtons() }
+    }
+
+    /** Только для debug: координаты кнопок на экране — по ним CI-скрипт делает тапы. */
+    private fun logButtons() {
+        val loc = IntArray(2)
+        getLocationOnScreen(loc)
+        fun l(name: String, b: Btn) {
+            android.util.Log.d("OrbitaUI", "btn:$name ${(loc[0] + b.r.centerX()).toInt()} ${(loc[1] + b.r.centerY()).toInt()}")
+        }
+        l("PLAY", menuPlay); l("SKINS", menuSkins); l("VIDEO", menuVideo); l("BACK", skinBack)
+        l("PAUSE", hudPause); l("RESUME", pauseResume); l("AGAIN", overAgain); l("MENU", overMenu); l("REVIVE", overRevive)
     }
 
     // ======================================================================
@@ -321,6 +333,7 @@ class GameView(
     // ======================================================================
 
     private fun go(s: Scr) {
+        if (BuildConfig.DEBUG) android.util.Log.d("OrbitaUI", "state:$s")
         scr = s
         scrAge = 0f
         pressedBtn?.pressed = false
