@@ -36,17 +36,17 @@ adb logcat -c
 tapxy $BACK; wait_state MENU 15; sleep 2; shot 04_menu_again
 
 adb logcat -c
-tapxy $PLAY; wait_state PLAY 15; sleep 5; shot 05_play_start
-for i in 1 2 3 4; do tapxy 90 700; sleep 1.2; tapxy 450 700; sleep 1.2; done
-shot 06_play_mid
-sleep 10; shot 07_play_late
-sleep 10; shot 08_play_later
+tapxy $PLAY; wait_state PLAY 15; sleep 3; shot 05_play_start
 
+# пауза сразу после старта, пока игрок жив
 adb logcat -c
 tapxy $PAUSE; wait_state PAUSE 15; sleep 2; shot 09_pause
 adb logcat -c
-tapxy $RESUME; wait_state PLAY 15; sleep 1.5; shot 10_countdown
-sleep 6
+tapxy $RESUME; wait_state PLAY 15; sleep 1; shot 10_countdown
+sleep 8
+for i in 1 2 3; do tapxy 90 700; sleep 1.2; tapxy 450 700; sleep 1.2; done
+shot 06_play_mid
+sleep 6; shot 07_play_late
 
 adb logcat -c
 wait_state OVER 90

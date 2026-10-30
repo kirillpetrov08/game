@@ -294,7 +294,7 @@ class GameView(
         pauseResume.shader = mkShader(pauseResume.r, Pal.accents[0], blueEnd)
 
         // ---- кометы ----
-        val cardW = (W - 3f * m) / 2f
+        val cardW = (W - 2f * m - gap) / 2f
         val top = H * 0.21f
         val areaH = H * 0.64f
         val cardH = (areaH - 2f * gap) / 3f
@@ -1136,7 +1136,7 @@ class GameView(
 
     private fun drawMenu(c: Canvas, a: Float) {
         val ts = min(W * 0.15f, H * 0.085f)
-        val ty = H * 0.105f + ts * 0.35f
+        val ty = H * 0.075f + ts * 0.35f
         g.text(c, Txt.t("ОРБИТА", "ORBITA"), W / 2f, ty, ts, Pal.white, Paint.Align.CENTER, accent, a)
         g.text(c, Txt.t("неоновый забег по орбитам", "neon orbit runner"), W / 2f, ty + ts * 0.5f, ts * 0.27f, Pal.dim, Paint.Align.CENTER, 0, a)
 
