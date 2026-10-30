@@ -1039,7 +1039,7 @@ class GameView(
             val n = ceil(countdown).toInt()
             val frac = countdown - (n - 1)
             val sc = 0.8f + 0.4f * frac
-            g.text(c, n.toString(), world.cx, world.cy + W * 0.14f, W * 0.3f * sc, Pal.white, Paint.Align.CENTER, accent, frac.coerceIn(0.2f, 1f))
+            g.text(c, n.toString(), world.cx, world.cy + world.unit * 0.62f + W * 0.14f, W * 0.26f * sc, Pal.white, Paint.Align.CENTER, accent, frac.coerceIn(0.55f, 1f))
         }
     }
 
