@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#04061A</color>
+    <color name="ic_launcher_background">#070B25</color>
+    <string name="again">ЕЩЁ РАЗ</string>
+    <string name="already_used">УЖЕ ИСПОЛЬЗОВАНО</string>
+    <string name="app_name">Орбита</string>
+    <string name="back">НАЗАД</string>
+    <string name="best_fmt">РЕКОРД %1$d</string>
+    <string name="comets">КОМЕТЫ</string>
+    <string name="continue_">ПРОДОЛЖИТЬ</string>
+    <string name="game_over">КОНЕЦ ПОЛЁТА</string>
+    <string name="gift">ПОДАРОК</string>
+    <string name="gift_wait">ЗАВТРА</string>
+    <string name="got_it">ПОНЯТНО</string>
+    <string name="graze">ВПРИТИРКУ!</string>
+    <string name="howto">КАК ИГРАТЬ</string>
+    <string name="howto_1">Касайся левой половины экрана — орбита ближе к центру, правой — дальше.</string>
+    <string name="howto_2">Собирай кристаллы: это очки, комбо и новые кометы.</string>
+    <string name="howto_3">Избегай красных барьеров и метеоров. Опасность видна заранее.</string>
+    <string name="howto_4">Щит, магнит и замедление времени помогут продержаться дольше.</string>
+    <string name="inward">ВНУТРЬ</string>
+    <string name="level_fmt">УРОВЕНЬ %1$d</string>
+    <string name="loading">ЗАГРУЗКА…</string>
+    <string name="lvl_short_fmt">УР. %1$d</string>
+    <string name="menu">МЕНЮ</string>
+    <string name="music">МУЗЫКА</string>
+    <string name="new_best">НОВЫЙ РЕКОРД!</string>
+    <string name="outward">НАРУЖУ</string>
+    <string name="paused">ПАУЗА</string>
+    <string name="play">ИГРАТЬ</string>
+    <string name="power_magnet">МАГНИТ</string>
+    <string name="power_shield">ЩИТ</string>
+    <string name="power_slow">ЗАМЕДЛЕНИЕ</string>
+    <string name="restart">ЗАНОВО</string>
+    <string name="resume">ПРОДОЛЖИТЬ</string>
+    <string name="score">СЧЁТ</string>
+    <string name="select">ВЫБРАТЬ</string>
+    <string name="selected">ВЫБРАНО</string>
+    <string name="settings">НАСТРОЙКИ</string>
+    <string name="skin_amethyst">Аметист</string>
+    <string name="skin_ember">Уголь</string>
+    <string name="skin_emerald">Изумруд</string>
+    <string name="skin_frost">Лёд</string>
+    <string name="skin_nova">Нова</string>
+    <string name="skin_prism">Призма</string>
+    <string name="skin_ruby">Рубин</string>
+    <string name="skin_sun">Солнце</string>
+    <string name="sound">ЗВУК</string>
+    <string name="tagline">неоновый забег по орбитам</string>
+    <string name="title">ОРБИТА</string>
+    <string name="toast_doubled">Кристаллы удвоены!</string>
+    <string name="toast_gems_fmt">+%1$d кристаллов!</string>
+    <string name="toast_gift_fmt">Подарок дня: +%1$d кристаллов (серия: %2$d)</string>
+    <string name="toast_no_reward">Награда не получена</string>
+    <string name="toast_not_enough">Не хватает кристаллов</string>
+    <string name="toast_unlocked_fmt">Комета «%1$s» открыта!</string>
+    <string name="toast_video_loading">Видео загружается, попробуй чуть позже</string>
+    <string name="version_fmt">Версия %1$s</string>
+    <string name="vibration">ВИБРАЦИЯ</string>
+    <style name="Theme.Orbita" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+    </style>
+</resources>

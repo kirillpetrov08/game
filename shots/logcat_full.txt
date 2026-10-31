@@ -1,0 +1,83 @@
+--------- beginning of system
+10-31 09:39:18.862   504  2070 W ActivityTaskManager: callingPackage for (uid=2000, pid=2859) has no WPC
+--------- beginning of main
+10-31 09:39:18.869   795   922 D KeyguardService: setOccluded(false)
+10-31 09:39:18.869   795   922 D KeyguardViewMediator: setOccluded(false)
+10-31 09:39:18.869   795   795 D KeyguardViewMediator: handleSetOccluded(false)
+10-31 09:39:18.869   504  2070 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.kirillpetrov.orbita/.MainActivity (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 09:39:18.870   795   823 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.kirillpetrov.orbita/com.kirillpetrov.orbita.MainActivity}
+10-31 09:39:18.926  2191  2191 D OrbitaUI: state:PAUSE
+10-31 09:39:18.936   448   836 D NuPlayerDriver: pause(0x774dd4b51a10)
+--------- beginning of kernel
+10-31 09:39:19.119     0     0 I logd    : logdr: UID=2000 GID=2000 PID=2862 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+10-31 09:39:19.136   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(14)
+10-31 09:39:19.318   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(6)
+10-31 09:39:19.502   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(44)
+10-31 09:39:19.634  2191  2191 D OrbitaUI: state:PLAY
+10-31 09:39:19.636   385   743 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000004) and output flags (00000002)
+10-31 09:39:19.637   385   743 D AF::TrackHandle: OpPlayAudio: track:66 usage:14 not muted
+10-31 09:39:19.638   385   743 D audioserver: FGS Logger Transaction failed
+10-31 09:39:19.638   385   743 D audioserver: -129
+10-31 09:39:19.682  2191  2191 D OrbitaUI: state:OVER
+10-31 09:39:19.684   385  2712 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000004) and output flags (00000002)
+10-31 09:39:19.685   385   743 D audioserver: FGS Logger Transaction failed
+10-31 09:39:19.685   385   743 D audioserver: -129
+10-31 09:39:19.685   385  2712 D AF::TrackHandle: OpPlayAudio: track:67 usage:14 not muted
+10-31 09:39:19.686   385  2712 D audioserver: FGS Logger Transaction failed
+10-31 09:39:19.686   385  2712 D audioserver: -129
+10-31 09:39:19.687   385  2712 D audioserver: FGS Logger Transaction failed
+10-31 09:39:19.687   385  2712 D audioserver: -129
+10-31 09:39:19.690   385  2712 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000004) and output flags (00000002)
+10-31 09:39:19.691   385  2712 D AF::TrackHandle: OpPlayAudio: track:68 usage:14 not muted
+10-31 09:39:19.692   385  2712 D audioserver: FGS Logger Transaction failed
+10-31 09:39:19.692   385  2712 D audioserver: -129
+10-31 09:39:19.696   504   524 D OomAdjuster: Not killing cached processes
+10-31 09:39:19.731  2191  2282 D EGL_emulation: app_time_stats: avg=48.93ms min=32.61ms max=66.34ms count=19
+10-31 09:39:19.816   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(5)
+10-31 09:39:19.861   385   487 D audioserver: FGS Logger Transaction failed
+10-31 09:39:19.861   385   487 D audioserver: -129
+10-31 09:39:20.387   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(8)
+10-31 09:39:20.406   385   487 D audioserver: FGS Logger Transaction failed
+10-31 09:39:20.406   385   487 D audioserver: -129
+10-31 09:39:20.743  2191  2282 D EGL_emulation: app_time_stats: avg=46.99ms min=31.68ms max=63.20ms count=21
+10-31 09:39:20.791   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(20)
+10-31 09:39:20.816   385   487 D audioserver: FGS Logger Transaction failed
+10-31 09:39:20.819   385   487 D audioserver: -129
+10-31 09:39:20.904   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(8)
+10-31 09:39:21.200     0     0 I logd    : logdr: UID=2000 GID=2000 PID=2870 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
+10-31 09:39:21.023   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(16)
+10-31 09:39:21.610   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(37)
+10-31 09:39:21.765   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(20)
+10-31 09:39:21.774  2191  2282 D EGL_emulation: app_time_stats: avg=41.11ms min=26.98ms max=61.41ms count=23
+10-31 09:39:22.016   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(21)
+10-31 09:39:22.365   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(11)
+10-31 09:39:22.819  2191  2282 D EGL_emulation: app_time_stats: avg=41.98ms min=25.45ms max=63.63ms count=23
+10-31 09:39:22.820   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(46)
+10-31 09:39:22.895   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(23)
+10-31 09:39:22.956   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(7)
+10-31 09:39:23.027   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(32)
+10-31 09:39:23.060   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(4)
+10-31 09:39:23.251   448  2438 D BufferPoolAccessor2.0: bufferpool2 0x774db4b549a8 : 9(589824 size) total buffers - 5(327680 size) used buffers - 172/181 (recycle/alloc) - 147/308 (fetch/transfer)
+10-31 09:39:23.378   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(12)
+10-31 09:39:23.837  2191  2282 D EGL_emulation: app_time_stats: avg=40.84ms min=28.58ms max=64.27ms count=23
+10-31 09:39:23.871   504   524 E BLASTSyncEngine: WM sent Transaction to organized, but never received commit callback. Application ANR likely to follow.
+10-31 09:39:24.025   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(11)
+10-31 09:39:24.057   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(5)
+10-31 09:39:24.145   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(6)
+10-31 09:39:24.236   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(8)
+10-31 09:39:24.541   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(8)
+10-31 09:39:24.622   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(34)
+10-31 09:39:24.859  2191  2282 D EGL_emulation: app_time_stats: avg=43.19ms min=26.38ms max=59.92ms count=22
+10-31 09:39:24.962   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(23)
+10-31 09:39:25.123   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(15)
+10-31 09:39:25.552   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(23)
+10-31 09:39:25.624   795   795 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-31 09:39:25.879  2191  2282 D EGL_emulation: app_time_stats: avg=41.23ms min=26.48ms max=58.63ms count=23
+10-31 09:39:25.913   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(3)
+10-31 09:39:26.389  2875  2875 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-31 09:39:26.391  2875  2875 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-31 09:39:26.614     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+10-31 09:39:26.417   134   134 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-31 09:39:26.417  2875  2876 I Gralloc4: mapper 4.x is not supported
+10-31 09:39:26.453   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(22)
+10-31 09:39:26.616   385   487 D AudioFlinger: mixer(0x7b5f3902b930) throttle end: throttle time(5)

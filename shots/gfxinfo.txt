@@ -1,0 +1,12 @@
+Applications Graphics Acceleration Info:
+Uptime: 149362 Realtime: 149362
+
+** Graphics info for pid 2191 [com.kirillpetrov.orbita] **
+
+Stats since: 35490332911ns
+Total frames rendered: 2281
+Janky frames: 2071 (90.79%)
+Janky frames (legacy): 2281 (100.00%)
+50th percentile: 93ms
+90th percentile: 117ms
+95th percentile: 133ms

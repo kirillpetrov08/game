@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/raw_sfx_hit.wav.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/raw/sfx_hit.wav"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/raw_sfx_graze.wav.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/raw/sfx_graze.wav"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/raw_sfx_crystal.wav.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/raw/sfx_crystal.wav"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/xml_backup_rules.xml.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/raw_sfx_levelup.wav.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/raw/sfx_levelup.wav"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/raw_sfx_switch.wav.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/raw/sfx_switch.wav"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/raw_music.wav.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/raw/music.wav"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/raw_sfx_revive.wav.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/raw/sfx_revive.wav"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/raw_sfx_over.wav.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/raw/sfx_over.wav"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/raw_sfx_click.wav.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/raw/sfx_click.wav"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/xml_data_extraction_rules.xml.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/raw_sfx_shield.wav.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/raw/sfx_shield.wav"
+    },
+    {
+        "merged": "com.kirillpetrov.orbita.app-debug-35:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.kirillpetrov.orbita.app-main-37:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    }
+]

@@ -1,0 +1,272 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.kirillpetrov.orbita"
+4    android:versionCode="2"
+5    android:versionName="1.1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:4:5-67
+11-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:5:5-79
+12-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:5:22-76
+13    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+13-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:10:5-79
+13-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:10:22-76
+14
+15    <queries>
+15-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:12:5-14:15
+16        <package android:name="com.android.vending" />
+16-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:13:9-55
+16-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:13:18-52
+17
+18        <intent>
+18-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:13:9-15:18
+19            <action android:name="ru.vk.store.sdk.install.referrer.InstallReferrerProvider" />
+19-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:14:13-95
+19-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:14:21-92
+20        </intent>
+21    </queries>
+22
+23    <permission
+23-->[androidx.core:core:1.15.0] /home/runner/.gradle/caches/8.11.1/transforms/8bb14eb9fa00690645ad54e0d3e16d96/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
+24        android:name="com.kirillpetrov.orbita.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+24-->[androidx.core:core:1.15.0] /home/runner/.gradle/caches/8.11.1/transforms/8bb14eb9fa00690645ad54e0d3e16d96/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
+25        android:protectionLevel="signature" />
+25-->[androidx.core:core:1.15.0] /home/runner/.gradle/caches/8.11.1/transforms/8bb14eb9fa00690645ad54e0d3e16d96/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
+26
+27    <uses-permission android:name="com.kirillpetrov.orbita.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+27-->[androidx.core:core:1.15.0] /home/runner/.gradle/caches/8.11.1/transforms/8bb14eb9fa00690645ad54e0d3e16d96/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
+27-->[androidx.core:core:1.15.0] /home/runner/.gradle/caches/8.11.1/transforms/8bb14eb9fa00690645ad54e0d3e16d96/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
+28    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+28-->[com.android.installreferrer:installreferrer:2.2] /home/runner/.gradle/caches/8.11.1/transforms/ee0559675ca2200e059b2b1adea694f4/transformed/installreferrer-2.2/AndroidManifest.xml:9:5-110
+28-->[com.android.installreferrer:installreferrer:2.2] /home/runner/.gradle/caches/8.11.1/transforms/ee0559675ca2200e059b2b1adea694f4/transformed/installreferrer-2.2/AndroidManifest.xml:9:22-107
+29
+30    <application
+30-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:7:5-35:19
+31        android:name="com.kirillpetrov.orbita.App"
+31-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:8:9-28
+32        android:allowBackup="true"
+32-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:9:9-35
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.15.0] /home/runner/.gradle/caches/8.11.1/transforms/8bb14eb9fa00690645ad54e0d3e16d96/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
+34        android:dataExtractionRules="@xml/data_extraction_rules"
+34-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:10:9-65
+35        android:debuggable="true"
+36        android:enableOnBackInvokedCallback="true"
+36-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:12:9-51
+37        android:extractNativeLibs="false"
+38        android:fullBackupContent="@xml/backup_rules"
+38-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:11:9-54
+39        android:hardwareAccelerated="true"
+39-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:13:9-43
+40        android:icon="@mipmap/ic_launcher"
+40-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:14:9-43
+41        android:label="@string/app_name"
+41-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:16:9-41
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:15:9-54
+43        android:theme="@style/Theme.Orbita" >
+43-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:17:9-44
+44
+45        <!-- SDK инициализируем вручную в App.onCreate -->
+46        <meta-data
+46-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:20:9-22:37
+47            android:name="com.yandex.mobile.ads.AUTOMATIC_SDK_INITIALIZATION"
+47-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:21:13-78
+48            android:value="false" />
+48-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:22:13-34
+49
+50        <activity
+50-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:24:9-34:20
+51            android:name="com.kirillpetrov.orbita.MainActivity"
+51-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:25:13-41
+52            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden|keyboard|uiMode|density"
+52-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:29:13-130
+53            android:exported="true"
+53-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:26:13-36
+54            android:launchMode="singleTask"
+54-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:27:13-44
+55            android:screenOrientation="portrait" >
+55-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:28:13-49
+56            <intent-filter>
+56-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:30:13-33:29
+57                <action android:name="android.intent.action.MAIN" />
+57-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:31:17-69
+57-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:31:25-66
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+59-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:32:17-77
+59-->/home/runner/work/game/game/app/src/main/AndroidManifest.xml:32:27-74
+60            </intent-filter>
+61        </activity>
+62        <activity
+62-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:17:9-22:46
+63            android:name="com.yandex.mobile.ads.common.AdActivity"
+63-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:18:13-67
+64            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density"
+64-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:19:13-130
+65            android:enableOnBackInvokedCallback="false"
+65-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:20:13-56
+66            android:theme="@style/MonetizationAdsInternal.AdActivity" />
+66-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:21:13-70
+67
+68        <provider
+68-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:24:9-27:40
+69            android:name="com.yandex.mobile.ads.core.initializer.YandexAdsInitializeProvider"
+69-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:25:13-94
+70            android:authorities="com.kirillpetrov.orbita.YandexAdsInitializeProvider"
+70-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:26:13-79
+71            android:exported="false" />
+71-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:27:13-37
+72
+73        <activity
+73-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:29:9-34:46
+74            android:name="com.yandex.mobile.ads.features.debugpanel.ui.IntegrationInspectorActivity"
+74-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:30:13-101
+75            android:enableOnBackInvokedCallback="false"
+75-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:31:13-56
+76            android:exported="false"
+76-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:32:13-37
+77            android:theme="@style/DebugPanelTheme" />
+77-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:33:13-51
+78
+79        <provider
+79-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:36:9-44:20
+80            android:name="com.yandex.mobile.ads.features.debugpanel.data.local.DebugPanelFileProvider"
+80-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:37:13-103
+81            android:authorities="com.kirillpetrov.orbita.monetization.ads.inspector.fileprovider"
+81-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:38:13-91
+82            android:exported="false"
+82-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:39:13-37
+83            android:grantUriPermissions="true" >
+83-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:40:13-47
+84            <meta-data
+84-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:41:13-43:66
+85                android:name="android.support.FILE_PROVIDER_PATHS"
+85-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:42:17-67
+86                android:resource="@xml/debug_panel_file_paths" />
+86-->[com.yandex.android:mobileads:8.6.0] /home/runner/.gradle/caches/8.11.1/transforms/7415c99ccb43d9e63a7d38f63468dec8/transformed/mobileads-8.6.0/AndroidManifest.xml:43:17-63
+87        </provider> <!-- AppMetrica Analytics: common service -->
+88        <service
+88-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:21:9-32:19
+89            android:name="io.appmetrica.analytics.internal.AppMetricaService"
+89-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:22:13-78
+90            android:enabled="true"
+90-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:23:13-35
+91            android:exported="false" >
+91-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:24:13-37
+92            <intent-filter>
+92-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:25:13-31:29
+93                <category android:name="android.intent.category.DEFAULT" />
+93-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:26:17-76
+93-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:26:27-73
+94
+95                <action android:name="io.appmetrica.analytics.IAppMetricaService" />
+95-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:28:17-85
+95-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:28:25-82
+96
+97                <data android:scheme="appmetrica" />
+97-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:30:17-53
+97-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:30:23-50
+98            </intent-filter>
+99        </service> <!-- To track preinstallations -->
+100        <provider
+100-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:35:9-40:54
+101            android:name="io.appmetrica.analytics.internal.PreloadInfoContentProvider"
+101-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:36:13-87
+102            android:authorities="com.kirillpetrov.orbita.appmetrica.preloadinfo.retail"
+102-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:37:13-81
+103            android:enabled="true"
+103-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:38:13-35
+104            android:exported="true" />
+104-->[io.appmetrica.analytics:analytics:8.5.1] /home/runner/.gradle/caches/8.11.1/transforms/0532153b5aa92fe0044556c1ab2ed6a0/transformed/analytics-8.5.1/AndroidManifest.xml:39:13-36
+105
+106        <activity
+106-->[com.google.android.gms:play-services-base:18.5.0] /home/runner/.gradle/caches/8.11.1/transforms/33e7df9c44330bd0770b0a30743a7d8c/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+107            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+107-->[com.google.android.gms:play-services-base:18.5.0] /home/runner/.gradle/caches/8.11.1/transforms/33e7df9c44330bd0770b0a30743a7d8c/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+108            android:exported="false"
+108-->[com.google.android.gms:play-services-base:18.5.0] /home/runner/.gradle/caches/8.11.1/transforms/33e7df9c44330bd0770b0a30743a7d8c/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+109            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+109-->[com.google.android.gms:play-services-base:18.5.0] /home/runner/.gradle/caches/8.11.1/transforms/33e7df9c44330bd0770b0a30743a7d8c/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+110
+111        <meta-data
+111-->[com.google.android.gms:play-services-basement:18.4.0] /home/runner/.gradle/caches/8.11.1/transforms/4f969f40ab8fd2de0892002fd0852837/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+112            android:name="com.google.android.gms.version"
+112-->[com.google.android.gms:play-services-basement:18.4.0] /home/runner/.gradle/caches/8.11.1/transforms/4f969f40ab8fd2de0892002fd0852837/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+113            android:value="@integer/google_play_services_version" />
+113-->[com.google.android.gms:play-services-basement:18.4.0] /home/runner/.gradle/caches/8.11.1/transforms/4f969f40ab8fd2de0892002fd0852837/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+114
+115        <provider
+115-->[androidx.emoji2:emoji2:1.2.0] /home/runner/.gradle/caches/8.11.1/transforms/54fc7a750e5e9320739a76a93f0a93e3/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+116            android:name="androidx.startup.InitializationProvider"
+116-->[androidx.emoji2:emoji2:1.2.0] /home/runner/.gradle/caches/8.11.1/transforms/54fc7a750e5e9320739a76a93f0a93e3/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+117            android:authorities="com.kirillpetrov.orbita.androidx-startup"
+117-->[androidx.emoji2:emoji2:1.2.0] /home/runner/.gradle/caches/8.11.1/transforms/54fc7a750e5e9320739a76a93f0a93e3/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+118            android:exported="false" >
+118-->[androidx.emoji2:emoji2:1.2.0] /home/runner/.gradle/caches/8.11.1/transforms/54fc7a750e5e9320739a76a93f0a93e3/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+119            <meta-data
+119-->[androidx.emoji2:emoji2:1.2.0] /home/runner/.gradle/caches/8.11.1/transforms/54fc7a750e5e9320739a76a93f0a93e3/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+120                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+120-->[androidx.emoji2:emoji2:1.2.0] /home/runner/.gradle/caches/8.11.1/transforms/54fc7a750e5e9320739a76a93f0a93e3/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+121                android:value="androidx.startup" />
+121-->[androidx.emoji2:emoji2:1.2.0] /home/runner/.gradle/caches/8.11.1/transforms/54fc7a750e5e9320739a76a93f0a93e3/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+122            <meta-data
+122-->[androidx.lifecycle:lifecycle-process:2.8.7] /home/runner/.gradle/caches/8.11.1/transforms/581a5f62bdc74aca7f53473f71a53423/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
+123                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+123-->[androidx.lifecycle:lifecycle-process:2.8.7] /home/runner/.gradle/caches/8.11.1/transforms/581a5f62bdc74aca7f53473f71a53423/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
+124                android:value="androidx.startup" />
+124-->[androidx.lifecycle:lifecycle-process:2.8.7] /home/runner/.gradle/caches/8.11.1/transforms/581a5f62bdc74aca7f53473f71a53423/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
+125            <meta-data
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+126                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+127                android:value="androidx.startup" />
+127-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+128        </provider>
+129
+130        <receiver
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+131            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+132            android:directBootAware="false"
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+133            android:enabled="true"
+133-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+134            android:exported="true"
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+135            android:permission="android.permission.DUMP" >
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+136            <intent-filter>
+136-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+137                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+137-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+137-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+138            </intent-filter>
+139            <intent-filter>
+139-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+140                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+140-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+140-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+141            </intent-filter>
+142            <intent-filter>
+142-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+143                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+143-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+143-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+144            </intent-filter>
+145            <intent-filter>
+145-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+146                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+146-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+146-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.11.1/transforms/2c80e3d639d06b8f3105deb366713d1b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+147            </intent-filter>
+148        </receiver>
+149    </application>
+150
+151</manifest>
