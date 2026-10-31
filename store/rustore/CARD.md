@@ -143,13 +143,25 @@ RuStore поддерживает промо-видео. Если понадоб�
 
 **Ссылки для карточки RuStore:**
 
-| Вариант | URL | Комментарий |
+| Вариант | URL | Статус |
 |---|---|---|
-| GitHub (работает сразу) | `https://github.com/kirillpetrov08/game/blob/arena/257086d4-game/docs/privacy.html` | привязан к ветке |
-| GitHub Pages (после включения) | `https://kirillpetrov08.github.io/game/privacy.html` | постоянный, рекомендуется |
+| Открывается как страница (проверено) | `https://htmlpreview.github.io/?https://github.com/kirillpetrov08/game/blob/arena/257086d4-game/docs/privacy.html` | работает сейчас, но это сторонний просмотрщик |
+| CDN jsDelivr | `https://cdn.jsdelivr.net/gh/kirillpetrov08/game@arena/257086d4-game/docs/privacy.html` | работает сейчас, файл отдаётся как есть |
+| GitHub Pages (правильный вариант) | `https://kirillpetrov08.github.io/game/privacy.html` | нужен мерж PR #1 или разрешение ветки в окружении |
 
-Для Pages нужно один раз включить: репозиторий → **Settings → Pages → Source: GitHub Actions**
-(workflow `Legal pages` уже лежит в `.github/workflows/pages.yml`).
+Что нужно сделать один раз (любой из вариантов):
+
+1. **Смержить PR #1** (ветка `arena/257086d4-game` → `main`). У окружения `github-pages` правило ветвей
+   допускает деплой только с `main`, поэтому workflow с рабочей ветки падает на старте job. После мержа
+   деплой отработает сам и адрес `https://kirillpetrov08.github.io/game/privacy.html` станет живым.
+   Побочный эффект: пуш в `main` запустит сборку и создаст релиз build-7 (тот же ключ подписи).
+2. Либо Settings → Environments → `github-pages` → Deployment branches → добавить
+   `arena/257086d4-game` → Save, затем перезапустить workflow **Legal pages**.
+3. Либо Settings → Pages → Source: **Deploy from a branch** → ветка `arena/257086d4-game`, папка `/docs`.
+
+Вариант 3 привязывает сайт к рабочей ветке; после её удаления переключите источник на `main`.
+Pages уже включён в репозитории (`build_type: workflow`), workflow `Legal pages` лежит в
+`.github/workflows/pages.yml`.
 
 Политика описывает главное для модерации: приложение не собирает персональные данные, локальные данные
 игры, рекламный SDK Яндекса и рекламный идентификатор, разрешения, права пользователя.
