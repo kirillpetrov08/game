@@ -82,6 +82,7 @@ noise = np.convolve(noise, k, mode="same")
 tt = t_axis(0.5)
 save_wav("sfx_hit", mix(noise * np.exp(-7 * tt) * 1.6, sweep(140, 38, 0.5, 0.7, 4.5)))
 save_wav("sfx_over", seq([tone(f, 0.16, 0.45, 4.5) for f in (440, 349, 294)] + [tone(220, 0.5, 0.45, 3.0)]))
+save_wav("sfx_graze", mix(sweep(1500, 2600, 0.11, 0.35, 12), tone(2093, 0.12, 0.18, 14)))
 save_wav("sfx_levelup", seq([tone(f, 0.09, 0.4, 8) for f in (523, 659, 784)] + [tone(1047, 0.3, 0.4, 5)]))
 save_wav("sfx_revive", mix(seq([tone(f, 0.10, 0.4, 7) for f in (392, 523, 659, 784)] + [tone(1047, 0.35, 0.4, 4)]),
                            sweep(200, 900, 0.7, 0.18, 3)))

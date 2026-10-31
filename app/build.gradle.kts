@@ -13,8 +13,8 @@ android {
         applicationId = "com.kirillpetrov.orbita"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = System.getenv("VERSION_CODE")?.toIntOrNull() ?: 2
+        versionName = "1.1.0"
     }
 
     // Подпись берётся из переменных окружения (CI) — ключ в репозиторий не кладём.
@@ -69,4 +69,6 @@ dependencies {
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.activity:activity-ktx:1.9.3")
     implementation("androidx.lifecycle:lifecycle-process:2.8.7")
+
+    testImplementation("junit:junit:4.13.2")
 }

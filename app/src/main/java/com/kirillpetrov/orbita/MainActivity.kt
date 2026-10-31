@@ -49,10 +49,12 @@ class MainActivity : ComponentActivity(), GameView.Host {
             v.setPadding(i.left, i.top, i.right, i.bottom)
             WindowInsetsCompat.CONSUMED
         }
-        banner = BannerHelper(this, bannerBox)
+        banner = BannerHelper(this, bannerBox, app.prefs) { !game.isInRun() }
         rewarded = RewardedHelper(this)
         banner.start()
         rewarded.preload()
+
+        applyDebugScene(intent)
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -62,6 +64,19 @@ class MainActivity : ComponentActivity(), GameView.Host {
                 }
             }
         })
+    }
+
+    override fun onNewIntent(intent: android.content.Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        applyDebugScene(intent)
+    }
+
+    /** Только debug: `adb shell am start ... --es scene gate` — быстрые сцены для скриншотов. */
+    private fun applyDebugScene(i: android.content.Intent?) {
+        if (!BuildConfig.DEBUG) return
+        val name = i?.getStringExtra("scene") ?: return
+        game.postDelayed({ game.debugScene(name) }, 600)
     }
 
     override fun onResume() {
@@ -100,9 +115,25 @@ class MainActivity : ComponentActivity(), GameView.Host {
     }
 
     override fun haptic(strong: Boolean) {
-        game.performHapticFeedback(
-            if (strong) HapticFeedbackConstants.LONG_PRESS else HapticFeedbackConstants.VIRTUAL_KEY
-        )
+        val kind = when {
+            strong -> HapticFeedbackConstants.LONG_PRESS
+            Build.VERSION.SDK_INT >= 30 -> HapticFeedbackConstants.CONFIRM
+            else -> HapticFeedbackConstants.VIRTUAL_KEY
+        }
+        game.performHapticFeedback(kind)
+    }
+
+    override fun musicLevel(level: Int) {
+        sfx.setIntensity(level)
+    }
+
+    override fun runState(inRun: Boolean) {
+        banner.onRunStateChanged(inRun)
+    }
+
+    override fun warmUp() {
+        rewarded.preload()
+        AdsManager.whenReady { appOpen.preload() }
     }
 
     override fun musicChanged(on: Boolean) {

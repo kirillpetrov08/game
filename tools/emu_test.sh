@@ -1,5 +1,5 @@
 #!/bin/bash
-# Прогон игры в эмуляторе: скриншоты экранов + лог. Запускается из CI.
+# Прогон игры в эмуляторе: скриншоты экранов и сцен + лог. Запускается из CI.
 PKG=com.kirillpetrov.orbita
 APK=app/build/outputs/apk/debug/app-debug.apk
 mkdir -p shots
@@ -21,38 +21,43 @@ wait_state() {  # wait_state NAME TRIES
 }
 coords() { adb logcat -d -s OrbitaUI:D | grep "btn:$1 " | tail -1 | awk '{print $(NF-1), $NF}'; }
 tapxy() { adb shell input tap "$1" "$2"; }
+scene() {  # scene NAME STATE WAIT_SECONDS SHOT
+  adb logcat -c
+  adb shell am start -n $PKG/.MainActivity --es scene "$1"
+  wait_state "$2" 20
+  sleep "$3"; shot "$4"
+}
 
-sleep 2; shot 01_splash
+sleep 2
 wait_state MENU 40
-sleep 6   # даём баннеру загрузиться и раскладке перестроиться
-shot 02_menu
-PLAY=$(coords PLAY); SKINS=$(coords SKINS); BACK=$(coords BACK); PAUSE=$(coords PAUSE)
-RESUME=$(coords RESUME); AGAIN=$(coords AGAIN); MENU=$(coords MENU)
-echo "coords: PLAY=$PLAY SKINS=$SKINS BACK=$BACK PAUSE=$PAUSE RESUME=$RESUME AGAIN=$AGAIN MENU=$MENU" | tee shots/coords.txt
+sleep 6
+shot 01_menu
+PLAY=$(coords PLAY); GIFT=$(coords GIFT); GEAR=$(coords GEAR); PAUSE=$(coords PAUSE)
+RESUME=$(coords RESUME); GOTIT=$(coords GOTIT); SBACK=$(coords SBACK); MENU=$(coords MENU)
+echo "coords: PLAY=$PLAY GIFT=$GIFT GEAR=$GEAR PAUSE=$PAUSE RESUME=$RESUME GOTIT=$GOTIT SBACK=$SBACK" | tee shots/coords.txt
+
+tapxy $GIFT; sleep 3; shot 02_gift_claimed
 
 adb logcat -c
-tapxy $SKINS; wait_state SKINS 15; sleep 3; shot 03_skins
+tapxy $GEAR; wait_state SETTINGS 15; sleep 2; shot 03_settings
 adb logcat -c
-tapxy $BACK; wait_state MENU 15; sleep 2; shot 04_menu_again
+tapxy $SBACK; wait_state MENU 15; sleep 1
+
+# первый запуск игры показывает «как играть»
+adb logcat -c
+tapxy $PLAY; wait_state HOWTO 15; sleep 2; shot 04_howto
+adb logcat -c
+tapxy $GOTIT; wait_state PLAY 15; sleep 4; shot 05_play_hints
 
 adb logcat -c
-tapxy $PLAY; wait_state PLAY 15; sleep 3; shot 05_play_start
+tapxy $PAUSE; wait_state PAUSE 15; sleep 2; shot 06_pause
 
-# пауза сразу после старта, пока игрок жив
-adb logcat -c
-tapxy $PAUSE; wait_state PAUSE 15; sleep 2; shot 09_pause
-adb logcat -c
-tapxy $RESUME; wait_state PLAY 15; sleep 1; shot 10_countdown
-sleep 8
-for i in 1 2 3; do tapxy 90 700; sleep 1.2; tapxy 450 700; sleep 1.2; done
-shot 06_play_mid
-sleep 6; shot 07_play_late
-
-adb logcat -c
-wait_state OVER 90
-sleep 4; shot 11_gameover
-adb logcat -c
-tapxy $MENU; wait_state MENU 15; sleep 2; shot 12_menu_after
+scene skins SKINS 4 07_skins
+scene gate PLAY 14 08_gate
+scene ring PLAY 14 09_ring
+scene meteors PLAY 14 10_meteors
+scene powers PLAY 14 11_powers
+scene over OVER 5 12_over
 
 adb logcat -d > shots/logcat_full.txt
 grep -iE "FATAL|AndroidRuntime" shots/logcat_full.txt | head -40 > shots/logcat_key.txt

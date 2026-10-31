@@ -233,6 +233,73 @@ class Gfx(context: Context) {
         fp.color = withAlpha(color, 0.25f * a)
         c.drawPath(path, fp)
     }
+
+    fun magnetIcon(c: Canvas, x: Float, y: Float, s: Float, color: Int, a: Float) {
+        fp.style = Paint.Style.STROKE
+        fp.strokeCap = Paint.Cap.BUTT
+        fp.strokeWidth = s * 0.5f
+        fp.color = withAlpha(color, a)
+        rect.set(x - s * 0.8f, y - s * 0.7f, x + s * 0.8f, y + s * 0.9f)
+        c.drawArc(rect, 0f, 180f, false, fp)
+        c.drawLine(x - s * 0.8f, y + s * 0.1f, x - s * 0.8f, y - s * 0.8f, fp)
+        c.drawLine(x + s * 0.8f, y + s * 0.1f, x + s * 0.8f, y - s * 0.8f, fp)
+        fp.color = withAlpha(Pal.white, a)
+        c.drawLine(x - s * 0.8f, y - s * 0.45f, x - s * 0.8f, y - s * 0.8f, fp)
+        c.drawLine(x + s * 0.8f, y - s * 0.45f, x + s * 0.8f, y - s * 0.8f, fp)
+    }
+
+    fun clockIcon(c: Canvas, x: Float, y: Float, s: Float, color: Int, a: Float, spin: Float) {
+        fp.style = Paint.Style.STROKE
+        fp.strokeCap = Paint.Cap.ROUND
+        fp.strokeWidth = s * 0.22f
+        fp.color = withAlpha(color, a)
+        c.drawCircle(x, y, s, fp)
+        val ang = spin
+        c.drawLine(x, y, x + cos(ang) * s * 0.6f, y + sin(ang) * s * 0.6f, fp)
+        c.drawLine(x, y, x + cos(ang * 0.083f - 1.2f) * s * 0.4f, y + sin(ang * 0.083f - 1.2f) * s * 0.4f, fp)
+    }
+
+    fun giftIcon(c: Canvas, x: Float, y: Float, s: Float, color: Int, a: Float) {
+        fp.style = Paint.Style.FILL
+        fp.color = withAlpha(color, a)
+        rect.set(x - s * 0.9f, y - s * 0.15f, x + s * 0.9f, y + s * 0.9f)
+        c.drawRoundRect(rect, s * 0.12f, s * 0.12f, fp)
+        rect.set(x - s * 1.0f, y - s * 0.55f, x + s * 1.0f, y - s * 0.05f)
+        c.drawRoundRect(rect, s * 0.12f, s * 0.12f, fp)
+        fp.color = withAlpha(Pal.ink, a * 0.85f)
+        rect.set(x - s * 0.12f, y - s * 0.55f, x + s * 0.12f, y + s * 0.9f)
+        c.drawRect(rect, fp)
+        fp.style = Paint.Style.STROKE
+        fp.strokeWidth = s * 0.16f
+        fp.strokeCap = Paint.Cap.ROUND
+        fp.color = withAlpha(color, a)
+        rect.set(x - s * 0.55f, y - s * 1.0f, x - s * 0.02f, y - s * 0.5f)
+        c.drawOval(rect, fp)
+        rect.set(x + s * 0.02f, y - s * 1.0f, x + s * 0.55f, y - s * 0.5f)
+        c.drawOval(rect, fp)
+    }
+
+    fun gearIcon(c: Canvas, x: Float, y: Float, s: Float, color: Int) {
+        fp.style = Paint.Style.STROKE
+        fp.strokeCap = Paint.Cap.ROUND
+        fp.color = color
+        fp.strokeWidth = s * 0.3f
+        c.drawCircle(x, y, s * 0.62f, fp)
+        fp.strokeWidth = s * 0.28f
+        for (i in 0 until 8) {
+            val a = i * TAU / 8f
+            c.drawLine(x + cos(a) * s * 0.85f, y + sin(a) * s * 0.85f, x + cos(a) * s * 1.1f, y + sin(a) * s * 1.1f, fp)
+        }
+    }
+
+    fun powerIcon(c: Canvas, type: Int, x: Float, y: Float, s: Float, a: Float, spin: Float) {
+        val col = Pal.power[type]
+        when (type) {
+            World.P_SHIELD -> shieldIcon(c, x, y, s, col, a)
+            World.P_MAGNET -> magnetIcon(c, x, y, s * 0.9f, col, a)
+            else -> clockIcon(c, x, y, s * 0.95f, col, a, spin)
+        }
+    }
 }
 
 /** Пул частиц без аллокаций во время игры. */
@@ -301,6 +368,56 @@ class Particles(private val max: Int) {
             val r = size[i] * (0.5f + 0.9f * t)
             g.glow(c, x[i], y[i], r * 2.6f, color[i], t * 0.9f)
             g.glow(c, x[i], y[i], r * 1.1f, Pal.white, t * 0.7f)
+        }
+    }
+}
+
+
+/** Расходящиеся кольца: уровень, щит, смерть, подарок. */
+class Shockwaves(private val max: Int) {
+    private val x = FloatArray(max)
+    private val y = FloatArray(max)
+    private val r0 = FloatArray(max)
+    private val r1 = FloatArray(max)
+    private val age = FloatArray(max)
+    private val dur = FloatArray(max)
+    private val width = FloatArray(max)
+    private val color = IntArray(max)
+    private var n = 0
+    private val p = Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.STROKE }
+
+    fun clear() {
+        n = 0
+    }
+
+    fun emit(px: Float, py: Float, from: Float, to: Float, seconds: Float, w: Float, col: Int) {
+        if (n >= max) return
+        x[n] = px; y[n] = py; r0[n] = from; r1[n] = to; age[n] = 0f; dur[n] = seconds; width[n] = w; color[n] = col
+        n++
+    }
+
+    fun update(dt: Float) {
+        var i = 0
+        while (i < n) {
+            age[i] += dt
+            if (age[i] >= dur[i]) {
+                n--
+                x[i] = x[n]; y[i] = y[n]; r0[i] = r0[n]; r1[i] = r1[n]; age[i] = age[n]
+                dur[i] = dur[n]; width[i] = width[n]; color[i] = color[n]
+                continue
+            }
+            i++
+        }
+    }
+
+    fun draw(c: Canvas) {
+        for (i in 0 until n) {
+            val t = age[i] / dur[i]
+            val e = easeOut(t)
+            val r = lerp(r0[i], r1[i], e)
+            p.strokeWidth = width[i] * (1f - t * 0.7f)
+            p.color = withAlpha(color[i], (1f - t) * 0.85f)
+            c.drawCircle(x[i], y[i], r, p)
         }
     }
 }

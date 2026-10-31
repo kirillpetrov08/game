@@ -59,16 +59,42 @@ object AdsManager {
     }
 }
 
-/** Адаптивный sticky-баннер внизу экрана. */
-class BannerHelper(private val activity: Activity, private val container: FrameLayout) {
+/**
+ * Адаптивный sticky-баннер внизу экрана.
+ * Высота контейнера фиксирована (запоминаем с прошлого запуска), а менять её можно только вне забега —
+ * иначе игровое поле «прыгало» бы, когда баннер догрузится в середине игры.
+ */
+class BannerHelper(
+    private val activity: Activity,
+    private val container: FrameLayout,
+    private val prefs: Prefs,
+    private val canResize: () -> Boolean
+) {
     private var banner: BannerAdView? = null
+    private val handler = Handler(Looper.getMainLooper())
+    private var retry = 0
+    private var pendingH = 0
+    private var currentH = 0
+    private var destroyed = false
+
+    init {
+        val dm = activity.resources.displayMetrics
+        setHeight(if (prefs.bannerH > 0) prefs.bannerH else (100f * dm.density).toInt())
+    }
+
+    private fun setHeight(px: Int) {
+        currentH = px
+        val lp = container.layoutParams
+        lp.height = px
+        container.layoutParams = lp
+    }
 
     fun start() {
         AdsManager.whenReady { container.post { load() } }
     }
 
     private fun load() {
-        if (activity.isDestroyed || banner != null) return
+        if (destroyed || activity.isDestroyed || banner != null) return
         val dm = activity.resources.displayMetrics
         var widthPx = container.width
         if (widthPx <= 0) widthPx = dm.widthPixels
@@ -77,11 +103,12 @@ class BannerHelper(private val activity: Activity, private val container: FrameL
         view.setAdSize(BannerAdSize.sticky(activity, widthDp))
         view.setBannerAdEventListener(object : BannerAdEventListener {
             override fun onAdLoaded() {
-                if (activity.isDestroyed) banner?.destroy()
+                retry = 0
+                view.post { measureAndApply(view.height) }
             }
 
             override fun onAdFailedToLoad(adRequestError: AdRequestError) {
-                // повторные запросы из этого колбэка не рекомендуются
+                scheduleRetry()
             }
 
             override fun onAdClicked() {}
@@ -90,13 +117,48 @@ class BannerHelper(private val activity: Activity, private val container: FrameL
         })
         container.addView(
             view,
-            FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.CENTER_HORIZONTAL)
+            FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.CENTER)
         )
         banner = view
         view.loadAd(AdRequest.Builder(AdIds.BANNER).build())
     }
 
+    private fun measureAndApply(h: Int) {
+        if (destroyed || h <= 0) return
+        prefs.bannerH = h
+        if (h == currentH) return
+        if (canResize()) {
+            setHeight(h)
+            pendingH = 0
+        } else {
+            pendingH = h
+        }
+    }
+
+    /** Вызывается игрой при входе/выходе из забега. */
+    fun onRunStateChanged(inRun: Boolean) {
+        if (!inRun && pendingH > 0) {
+            setHeight(pendingH)
+            pendingH = 0
+        }
+    }
+
+    private fun scheduleRetry() {
+        if (destroyed) return
+        val delay = minOf(120_000L, 15_000L shl minOf(retry, 3))
+        retry++
+        handler.postDelayed({ reload() }, delay)
+    }
+
+    private fun reload() {
+        val v = banner ?: return
+        if (destroyed || activity.isDestroyed) return
+        v.loadAd(AdRequest.Builder(AdIds.BANNER).build())
+    }
+
     fun destroy() {
+        destroyed = true
+        handler.removeCallbacksAndMessages(null)
         banner?.destroy()
         banner = null
     }
