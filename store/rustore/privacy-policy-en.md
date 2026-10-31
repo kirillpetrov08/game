@@ -2,11 +2,13 @@
 
 Effective date: 31 October 2026
 App version: 1.1.0 (`com.kirillpetrov.orbita`)
+Developer: **Petrov Kirill Igorevich** (Петров Кирилл Игоревич)
+E-mail: **kirillpetrov08@gmail.com**
 
-## 1. Who we are
+## 1. Developer
 
-Orbita: Neon Orbit Runner (the "App") is developed and distributed by **[name / company], tax ID [ID],
-e-mail: [email]@[domain]** (the "Developer"). Contact for any privacy question: **[email]@[domain]**.
+Orbita: Neon Orbit Runner (the "App") is developed and distributed by a private individual,
+Petrov Kirill Igorevich (the "Developer"). Contact for any privacy question: kirillpetrov08@gmail.com.
 
 ## 2. Data processed by the App
 
@@ -66,10 +68,12 @@ Ad requests are sent over HTTPS.
 
 ## 10. Changes
 
-The current version is always available at **[policy URL]**. Material changes will update the effective
-date and, where needed, be announced in the App's release notes.
+The current version is always available on this page. Material changes update the effective date and,
+where needed, are announced in the App's release notes.
 
 ## 11. Contact
 
-Developer: **[name / company]**
-E-mail: **[email]@[domain]**
+Developer: Petrov Kirill Igorevich
+E-mail: kirillpetrov08@gmail.com
+
+Published version: https://kirillpetrov08.github.io/game/privacy-en.html
