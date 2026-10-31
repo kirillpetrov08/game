@@ -141,27 +141,15 @@ RuStore поддерживает промо-видео. Если понадоб�
 Тексты в markdown: `privacy-policy-ru.md`, `privacy-policy-en.md`. Данные разработчика вписаны
 (Петров Кирилл Игоревич, kirillpetrov08@gmail.com), ИНН и прочие реквизиты не указываются.
 
-**Ссылки для карточки RuStore:**
+**Ссылка для карточки RuStore (рабочая, проверена):**
 
-| Вариант | URL | Статус |
-|---|---|---|
-| Открывается как страница (проверено) | `https://htmlpreview.github.io/?https://github.com/kirillpetrov08/game/blob/arena/257086d4-game/docs/privacy.html` | работает сейчас, но это сторонний просмотрщик |
-| CDN jsDelivr | `https://cdn.jsdelivr.net/gh/kirillpetrov08/game@arena/257086d4-game/docs/privacy.html` | работает сейчас, файл отдаётся как есть |
-| GitHub Pages (правильный вариант) | `https://kirillpetrov08.github.io/game/privacy.html` | нужен мерж PR #1 или разрешение ветки в окружении |
+> **https://kirillpetrov08.github.io/game/privacy.html**
 
-Что нужно сделать один раз (любой из вариантов):
+Дополнительно: `https://kirillpetrov08.github.io/game/privacy-en.html` (EN), `https://kirillpetrov08.github.io/game/` (оглавление).
 
-1. **Смержить PR #1** (ветка `arena/257086d4-game` → `main`). У окружения `github-pages` правило ветвей
-   допускает деплой только с `main`, поэтому workflow с рабочей ветки падает на старте job. После мержа
-   деплой отработает сам и адрес `https://kirillpetrov08.github.io/game/privacy.html` станет живым.
-   Побочный эффект: пуш в `main` запустит сборку и создаст релиз build-7 (тот же ключ подписи).
-2. Либо Settings → Environments → `github-pages` → Deployment branches → добавить
-   `arena/257086d4-game` → Save, затем перезапустить workflow **Legal pages**.
-3. Либо Settings → Pages → Source: **Deploy from a branch** → ветка `arena/257086d4-game`, папка `/docs`.
-
-Вариант 3 привязывает сайт к рабочей ветке; после её удаления переключите источник на `main`.
-Pages уже включён в репозитории (`build_type: workflow`), workflow `Legal pages` лежит в
-`.github/workflows/pages.yml`.
+Сайт публикуется workflow **Legal pages** (`.github/workflows/pages.yml`) из папки `docs/` при каждом пуше в `main`.
+Pages включён в режиме `build_type: workflow`; у окружения `github-pages` разрешён деплой только с `main`,
+поэтому правки в политике должны попадать в `main` (через PR или напрямую).
 
 Политика описывает главное для модерации: приложение не собирает персональные данные, локальные данные
 игры, рекламный SDK Яндекса и рекламный идентификатор, разрешения, права пользователя.
