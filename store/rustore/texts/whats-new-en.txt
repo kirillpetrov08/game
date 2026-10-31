@@ -1,0 +1,10 @@
+Version 1.1.0 — a big update.
+
+• New hazards: gates, shrinking rings and meteor showers. Every threat is telegraphed.
+• Power-ups: shield, magnet and time slow.
+• A graze bonus for passing close to danger.
+• A daily login gift and doubled crystals for watching a video.
+• A "How to play" section and settings: sound, music, vibration.
+• Eight comets, including the rainbow Prism.
+• Russian and English UI, all texts moved to resources.
+• Rendering optimisations and stability fixes.

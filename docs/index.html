@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Орбита: неоновый забег — правовые документы</title>
+<meta name="description" content="Правовые документы приложения «Орбита: неоновый забег»: политика конфиденциальности, контакты разработчика.">
+<style>
+  :root{--bg:#04061a;--bg2:#0c1038;--text:#eaf0ff;--dim:#8c97c7;--accent:#2de2e6;--gold:#ffd84d}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:radial-gradient(900px 600px at 15% -5%, #16205c 0%, rgba(4,6,26,0) 60%),
+               radial-gradient(700px 500px at 95% 10%, #0d2b4a 0%, rgba(4,6,26,0) 55%),
+               linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
+    color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;
+    -webkit-font-smoothing:antialiased;padding:28px 18px;
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  .wrap{max-width:640px;width:100%}
+  .ring{width:76px;height:76px;border-radius:50%;margin:0 0 26px;position:relative;
+    border:3px solid rgba(45,226,230,.35);box-shadow:0 0 40px rgba(45,226,230,.25) inset}
+  .ring:before,.ring:after{content:"";position:absolute;inset:11px;border-radius:50%;
+    border:2px solid rgba(45,226,230,.22)}
+  .ring:after{inset:24px;background:radial-gradient(circle,#fff 0%,#ffd84d 55%,rgba(255,216,77,0) 70%)}
+  h1{font-size:clamp(26px,5vw,36px);margin:0 0 8px;line-height:1.2}
+  .sub{color:var(--dim);margin:0 0 30px}
+  a.card{display:flex;align-items:center;justify-content:space-between;gap:16px;
+    text-decoration:none;color:var(--text);background:linear-gradient(180deg, rgba(16,22,69,.9), rgba(10,14,45,.9));
+    border:1px solid rgba(140,151,199,.18);border-radius:16px;padding:18px 20px;margin:12px 0;
+    transition:border-color .15s ease, transform .15s ease}
+  a.card:hover{border-color:rgba(45,226,230,.55);transform:translateY(-1px)}
+  a.card .t{font-weight:600}
+  a.card .d{font-size:13px;color:var(--dim);margin-top:2px}
+  a.card .arrow{color:var(--accent);font-size:20px;flex:0 0 auto}
+  footer{color:var(--dim);font-size:13px;margin-top:34px;line-height:1.7}
+  code{background:rgba(140,151,199,.14);border-radius:6px;padding:1px 6px;
+    font:13px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#cfe0ff}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="ring"></div>
+  <h1>Орбита: неоновый забег</h1>
+  <p class="sub">Orbita: Neon Orbit Runner · правовые документы</p>
+
+  <a class="card" href="./privacy.html">
+    <span>
+      <span class="t">Политика конфиденциальности</span>
+      <span class="d">Русская версия — основной документ для магазина приложений</span>
+    </span>
+    <span class="arrow">→</span>
+  </a>
+
+  <a class="card" href="./privacy-en.html">
+    <span>
+      <span class="t">Privacy Policy</span>
+      <span class="d">English version</span>
+    </span>
+    <span class="arrow">→</span>
+  </a>
+
+  <footer>
+    Приложение <code>com.kirillpetrov.orbita</code>. Вопросы по обработке данных —
+    через контакты, указанные в политике конфиденциальности.
+  </footer>
+</div>
+</body>
+</html>

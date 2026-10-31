@@ -1,13 +1,34 @@
 #!/bin/bash
 # Прогон игры в эмуляторе: скриншоты экранов и сцен + лог. Запускается из CI.
+# Скриншоты делаются в 1080x1920 с русским интерфейсом — как нужно для карточки RuStore.
 PKG=com.kirillpetrov.orbita
 APK=app/build/outputs/apk/debug/app-debug.apk
 mkdir -p shots
 shot() { adb exec-out screencap -p > "shots/$1.png"; echo "shot $1"; }
 
-adb shell wm size 540x1200
-adb shell wm density 240
+# --- Русская локаль (без перезагрузки ресурсы не подхватятся) ---
+adb root > /dev/null 2>&1 || true
+sleep 3
+adb wait-for-device
+adb shell "setprop persist.sys.locale ru-RU" || true
+adb shell "setprop persist.sys.language ru" || true
+adb shell "setprop persist.sys.country RU" || true
+adb reboot || true
+adb wait-for-device
+for i in $(seq 1 90); do
+  [ "$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r')" = "1" ] && break
+  sleep 5
+done
+sleep 15
+echo "locale: $(adb shell getprop persist.sys.locale | tr -d '\r')"
+
+# --- Экран типичного телефона, без системных панелей ---
+adb shell wm size 1080x1920
+adb shell wm density 420
 adb shell settings put global window_animation_scale 0
+adb shell settings put global transition_animation_scale 0
+adb shell settings put global animator_duration_scale 0
+adb shell settings put global policy_control immersive.full=*
 adb install -r "$APK"
 adb logcat -c
 adb shell am start -n $PKG/.MainActivity
@@ -28,9 +49,9 @@ scene() {  # scene NAME STATE WAIT_SECONDS SHOT
   sleep "$3"; shot "$4"
 }
 
-sleep 2
+sleep 3
 wait_state MENU 40
-sleep 6
+sleep 8
 shot 01_menu
 PLAY=$(coords PLAY); GIFT=$(coords GIFT); GEAR=$(coords GEAR); PAUSE=$(coords PAUSE)
 RESUME=$(coords RESUME); GOTIT=$(coords GOTIT); SBACK=$(coords SBACK); MENU=$(coords MENU)

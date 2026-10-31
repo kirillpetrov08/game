@@ -1,0 +1,33 @@
+Orbita is a neon arcade game about a comet racing along the orbits around a star. One tap switches the orbit, one wrong move ends the run. The controls take five seconds to learn and the skill ceiling is high — there is always a better score to chase.
+
+🎮 HOW TO PLAY
+• Tap the left half of the screen to move one orbit closer to the centre.
+• Tap the right half to move one orbit outwards.
+• Four orbits, smooth transitions, a comet trail and particles.
+
+✨ WHAT'S INSIDE
+• Crystals for score, a combo multiplier up to x5 and a "graze" bonus for passing dangerously close to hazards.
+• Red barriers, shrinking rings and meteor showers. Every threat is telegraphed: barriers pulse before they switch on, meteors are marked on the screen edge.
+• Fair difficulty: a barrier never activates while the player is inside its zone.
+• Power-ups: shield (absorbs one hit), magnet (pulls crystals in) and time slow.
+• A new level every 15 seconds: the pace and the colour of the scene keep changing.
+• Eight comets, from the classic Nova to the rainbow Prism. Unlock them with crystals or with a streak of daily gifts.
+
+🎁 NO STRINGS ATTACHED
+• Free to play, no sign-up, no in-app purchases.
+• A daily gift for showing up — crystals for new comets.
+• Ads: a banner at the bottom, optional rewarded video (continue a run, bonus crystals) and an ad on launch. Everything is skippable, rewarded video is always opt-in.
+• You can continue one run after losing by watching a video.
+
+⚙️ SETTINGS AND LANGUAGE
+• Separate toggles for sound, music and vibration.
+• Russian and English UI, following the system language.
+• A "How to play" screen on the first launch.
+
+📱 TECH
+• Plays offline: the internet is only used to load ads.
+• About 5 MB, no heavy assets — all audio and graphics are generated on the device.
+• Android 7.0 and newer, tuned for portrait phone screens.
+• No personal data collection: scores and crystals stay on the device.
+
+Orbita is a perfect two-minute run: in a queue, on the subway or before bed. Try to beat your own record — and don't forget the graze bonus.
