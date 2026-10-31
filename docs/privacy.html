@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Политика конфиденциальности — Орбита: неоновый забег</title>
+<meta name="description" content="Политика конфиденциальности приложения «Орбита: неоновый забег» (com.kirillpetrov.orbita).">
+<style>
+  :root{
+    --bg:#04061a; --bg2:#0c1038; --panel:#101645; --text:#eaf0ff; --dim:#8c97c7;
+    --accent:#2de2e6; --gold:#ffd84d; --hazard:#ff3d71; --safe:#3dffa2;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(900px 600px at 15% -5%, #16205c 0%, rgba(4,6,26,0) 60%),
+      radial-gradient(700px 500px at 95% 10%, #0d2b4a 0%, rgba(4,6,26,0) 55%),
+      linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
+    color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:40px 22px 90px}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent);border:1px solid rgba(45,226,230,.35);
+    background:rgba(45,226,230,.07);border-radius:999px;padding:6px 14px;margin-bottom:22px;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+  h1{font-size:clamp(26px,4.4vw,38px);line-height:1.2;margin:0 0 10px;letter-spacing:.01em}
+  .sub{color:var(--dim);font-size:15px;margin:0 0 8px}
+  .sub b{color:var(--text);font-weight:600}
+  .card{
+    background:linear-gradient(180deg, rgba(16,22,69,.85), rgba(10,14,45,.85));
+    border:1px solid rgba(140,151,199,.18);border-radius:18px;padding:26px 26px;
+    margin:26px 0; box-shadow:0 18px 50px rgba(0,0,0,.35);
+  }
+  .card.note{border-color:rgba(255,216,77,.4);background:linear-gradient(180deg, rgba(58,44,10,.55), rgba(20,16,8,.5))}
+  h2{font-size:19px;margin:34px 0 10px;letter-spacing:.01em}
+  h2 .num{color:var(--accent);font-variant-numeric:tabular-nums;margin-right:8px}
+  h3{font-size:16px;margin:20px 0 6px;color:var(--text)}
+  p{margin:10px 0}
+  ul{margin:10px 0 10px 0;padding-left:22px}
+  li{margin:6px 0}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(45,226,230,.35)}
+  a:hover{border-bottom-color:var(--accent)}
+  code{
+    background:rgba(140,151,199,.14);border-radius:6px;padding:1px 6px;
+    font:13px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#cfe0ff;
+  }
+  .fill{
+    background:rgba(255,216,77,.16);border:1px dashed rgba(255,216,77,.65);
+    border-radius:6px;padding:1px 7px;color:var(--gold);font-weight:600;white-space:nowrap;
+  }
+  .grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin:16px 0}
+  .tile{background:rgba(140,151,199,.08);border:1px solid rgba(140,151,199,.16);border-radius:12px;padding:12px 14px}
+  .tile .k{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim)}
+  .tile .v{font-weight:600;margin-top:3px}
+  .ok{color:var(--safe)}
+  .no{color:var(--hazard)}
+  hr{border:0;border-top:1px solid rgba(140,151,199,.16);margin:34px 0}
+  footer{color:var(--dim);font-size:13px;margin-top:44px;line-height:1.7}
+  .toplink{display:inline-block;margin-bottom:26px;font-size:14px;color:var(--dim);border:0}
+  .toplink:hover{color:var(--accent)}
+  @media (max-width:520px){ .card{padding:20px 18px;border-radius:14px} .wrap{padding:26px 16px 70px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="toplink" href="./">← Орбита · правовые документы</a>
+  <div class="badge"><span class="dot"></span>Политика конфиденциальности</div>
+
+  <h1>Политика конфиденциальности<br>приложения «Орбита: неоновый забег»</h1>
+  <p class="sub">Дата вступления в силу: <b>31 октября 2026 г.</b> · Версия приложения: <b>1.1.0</b> ·
+     Пакет: <code>com.kirillpetrov.orbita</code></p>
+  <p class="sub"><a href="./privacy-en.html">English version →</a></p>
+
+  <div class="card note">
+    <b>Коротко.</b> В игре нет регистрации и аккаунтов. Мы не собираем ваши имя, телефон,
+    e-mail, геолокацию, контакты и файлы. Рекорд, кристаллы и настройки хранятся только на
+    вашем устройстве. Единственный сторонний компонент — рекламный SDK Яндекса, который
+    обрабатывает рекламный идентификатор устройства для показа и измерения рекламы.
+  </div>
+
+  <div class="grid">
+    <div class="tile"><div class="k">Регистрация</div><div class="v no">Нет</div></div>
+    <div class="tile"><div class="k">Сбор персональных данных</div><div class="v no">Нет</div></div>
+    <div class="tile"><div class="k">Реклама</div><div class="v">Yandex Mobile Ads</div></div>
+    <div class="tile"><div class="k">Разрешения</div><div class="v">Internet, Network state</div></div>
+  </div>
+
+  <h2><span class="num">1.</span>Кто мы</h2>
+  <p>Приложение «Орбита: неоновый забег» (далее — Приложение) разработано и распространяется
+     разработчиком: <span class="fill">[ФИО / ИП / ООО]</span>, ИНН <span class="fill">[ИНН]</span>,
+     e-mail: <span class="fill">[email]@[домен]</span> (далее — Разработчик). Контакт для любых
+     вопросов по обработке данных — тот же e-mail.</p>
+
+  <h2><span class="num">2.</span>Какие данные обрабатывает Приложение</h2>
+  <p>Приложение <b>не требует регистрации и не создаёт учётную запись</b>. Разработчик не собирает
+     и не передаёт себе имя, телефон, e-mail, адрес, геолокацию, контакты или содержимое файлов устройства.</p>
+  <p>На устройстве пользователя (локально) хранятся игровые данные:</p>
+  <ul>
+    <li>текущий рекорд и счёт;</li>
+    <li>количество кристаллов, открытые и выбранные кометы;</li>
+    <li>дата последнего ежедневного подарка и серия входов;</li>
+    <li>настройки звука, музыки и вибрации, флаг просмотра обучения;</li>
+    <li>служебные данные рекламного блока (высота баннера, частота показов).</li>
+  </ul>
+  <p>Эти данные не покидают устройство, не передаются Разработчику и удаляются вместе с
+     Приложением (или при очистке данных приложения в настройках Android).</p>
+
+  <h2><span class="num">3.</span>Реклама и сторонние SDK</h2>
+  <p>Для показа рекламы Приложение использует <b>Рекламную сеть Яндекса (Yandex Mobile Ads SDK)</b> —
+     сторона, в терминах законодательства выступающая самостоятельным оператором в отношении данных,
+     которые она обрабатывает для показа и измерения рекламы.</p>
+  <p>Что может обрабатывать рекламный SDK:</p>
+  <ul>
+    <li>рекламный идентификатор устройства (Google Advertising ID / OAID);</li>
+    <li>IP-адрес и приблизительный регион, определяемый по IP;</li>
+    <li>модель устройства, версия ОС, язык системы, тип сети, размер экрана;</li>
+    <li>сведения о показах и кликах по рекламе.</li>
+  </ul>
+  <p>Цели: показ рекламы (в том числе персонализированной, если пользователь не отключил
+     персонализацию), ограничение частоты показов, предотвращение мошенничества, измерение
+     эффективности рекламы.</p>
+  <p>Правовое основание: согласие пользователя и законный интерес в монетизации
+     (ст. 6 Федерального закона № 152-ФЗ «О персональных данных»); для рекламного идентификатора —
+     согласие, выраженное настройками устройства.</p>
+  <p>Пользователь может ограничить персонализацию рекламы в настройках Android:
+     «Настройки → Google → Реклама» (сброс и удаление рекламного идентификатора).</p>
+  <p>Документы партнёра: политика конфиденциальности Яндекса —
+     <a href="https://yandex.ru/legal/confidential/" rel="noopener" target="_blank">yandex.ru/legal/confidential</a>.</p>
+
+  <h2><span class="num">4.</span>Разрешения</h2>
+  <p>Приложение запрашивает только два разрешения:</p>
+  <ul>
+    <li><code>INTERNET</code> — загрузка рекламных материалов;</li>
+    <li><code>ACCESS_NETWORK_STATE</code> — проверка наличия сети перед загрузкой рекламы.</li>
+  </ul>
+  <p>Приложение не запрашивает доступ к камере, микрофону, контактам, файлам, геолокации и SMS.</p>
+
+  <h2><span class="num">5.</span>Передача данных третьим лицам</h2>
+  <p>Разработчик не продаёт и не передаёт данные пользователей третьим лицам. Единственная
+     передача — обращение к рекламному SDK Яндекса, описанное в разделе 3. Трансграничная
+     передача данных Разработчиком не осуществляется.</p>
+
+  <h2><span class="num">6.</span>Сроки хранения</h2>
+  <p>Игровые данные хранятся на устройстве до удаления Приложения или очистки его данных.
+     Данные, обрабатываемые рекламным SDK, хранятся в соответствии с политикой Яндекса.</p>
+
+  <h2><span class="num">7.</span>Дети</h2>
+  <p>Приложение не адресовано детям младше 6 лет и не собирает осознанно данные детей.
+     Возрастная маркировка в магазине приложений — <b>6+</b>. Если вы считаете, что ребёнок
+     передал какие-либо данные, напишите на контактный e-mail — мы поможем удалить локальные
+     данные (достаточно удалить Приложение).</p>
+
+  <h2><span class="num">8.</span>Права пользователя</h2>
+  <p>Вы вправе: получить информацию об обработке данных, потребовать уточнения, блокирования
+     или удаления данных, отозвать согласие. Поскольку Разработчик не хранит персональные данные,
+     основной способ реализации этих прав — удаление Приложения и/или очистка его данных;
+     по вопросам, связанным с рекламным SDK, запрос можно направить на контактный e-mail,
+     и он будет передан партнёру.</p>
+
+  <h2><span class="num">9.</span>Безопасность</h2>
+  <p>Данные игры хранятся в изолированном хранилище приложения (SharedPreferences) и недоступны
+     другим приложениям без прав root. Передача рекламных запросов выполняется по HTTPS.</p>
+
+  <h2><span class="num">10.</span>Изменения политики</h2>
+  <p>Актуальная версия политики всегда доступна на этой странице. При существенных изменениях
+     мы обновим дату вступления в силу и, при необходимости, сообщим об этом в описании
+     обновления приложения.</p>
+
+  <h2><span class="num">11.</span>Контакты</h2>
+  <p>Разработчик: <span class="fill">[ФИО / ИП / ООО]</span><br>
+     E-mail: <span class="fill">[email]@[домен]</span></p>
+
+  <footer>
+    Приложение: «Орбита: неоновый забег» (Orbita: Neon Orbit Runner), <code>com.kirillpetrov.orbita</code>.<br>
+    Звуки, музыка и графика созданы на устройстве; шрифт Russo One — SIL Open Font License 1.1.<br>
+    <a href="./">Правовые документы</a> · <a href="./privacy-en.html">Privacy Policy (EN)</a>
+  </footer>
+</div>
+</body>
+</html>
